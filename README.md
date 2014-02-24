@@ -7,7 +7,7 @@ language: ruby
 
 Rake is a DSL written in Ruby designed as a build system and generic task runner. It was built by the late and great [Jim Weirich](http://en.wikipedia.org/wiki/Jim_Weirich).
 
-The history of why we need Rake relates to [Make](http://en.wikipedia.org/wiki/Make_(software\)). For the most part, especially within Rails, we use Rake for its task syntax. A popular alternative to Rake in this context is [Thor](http://whatisthor.com/).
+The history of why we need Rake relates to [Make](http://en.wikipedia.org/wiki/Make_software). For the most part, especially within Rails, we use Rake for its task syntax. A popular alternative to Rake in this context is [Thor](http://whatisthor.com/).
 
 ## Installing Rake
 
