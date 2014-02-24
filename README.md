@@ -1,3 +1,8 @@
+---
+tags: rake
+language: ruby
+---
+
 # Rake TODO
 
 Rake is a DSL written in Ruby designed as a build system and generic task runner. It was built by the late and great [Jim Weirich](http://en.wikipedia.org/wiki/Jim_Weirich).
