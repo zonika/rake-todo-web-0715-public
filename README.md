@@ -1,6 +1,6 @@
 ---
-tags: rake
-language: ruby
+  tags: rake
+  language: ruby
   resources: 4
 ---
 
