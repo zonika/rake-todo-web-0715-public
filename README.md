@@ -1,6 +1,7 @@
 ---
 tags: rake
 language: ruby
+  resources: 4
 ---
 
 # Rake TODO
@@ -330,3 +331,9 @@ http://jasonseifer.com/2010/04/06/rake-tutorial?again
 http://www.rubycoloredglasses.com/2012/01/example-rake-task/
 http://pivotallabs.com/how-i-test-rake-tasks/
 http://robots.thoughtbot.com/test-rake-tasks-like-a-boss
+
+## Resources
+* [Wikipedia](http://en.wikipedia.org/) - [Jim Weirich](http://en.wikipedia.org/wiki/Jim_Weirich)
+* [Wikipedia](http://en.wikipedia.org/) - [Make (software)](http://en.wikipedia.org/wiki/Make_software)
+* [Thor](http://whatisthor.com/) - [Home](http://whatisthor.com/#getting-started)
+* [Avdi Grimm's Vituous Code](http://devblog.avdi.org/) - [Learn advanced Rake in 7 episodes](http://devblog.avdi.org/2014/04/30/learn-advanced-rake-in-7-episodes/?utm_source=rubyweekly&utm_medium=email)
