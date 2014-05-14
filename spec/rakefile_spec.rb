@@ -24,8 +24,8 @@ describe 'Rakefile' do
     it 'loads the environment' do
       # If the environment was successfully loaded the following
       # constants should be defined.
-      expect(defined?(User)).to be_true
-      expect(defined?(Todo)).to be_true
+      expect(defined?(User)).to be
+      expect(defined?(Todo)).to be
 
       # If you think about it, another thing we could have tested
       # is if the Rakefile includes a call to require environment
@@ -143,10 +143,10 @@ describe 'Rakefile' do
       end
     end
 
-    describe "todo_reminder" do
-      it 'defines a prerequisite of environment'
-      it 'uses an ENV variable of EMAIL'
-      it 'emails the user a todo reminder'
-    end
+    # describe "todo_reminder" do
+    #   it 'defines a prerequisite of environment'
+    #   it 'uses an ENV variable of EMAIL'
+    #   it 'emails the user a todo reminder'
+    # end
   end
 end
