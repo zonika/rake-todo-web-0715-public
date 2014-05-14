@@ -326,10 +326,15 @@ This becomes harder to test but still possible. Try to write a test.
 ## Resources
 
 http://lukaszwrobel.pl/blog/rake-tutorial
+
 http://railscasts.com/episodes/66-custom-rake-tasks
+
 http://jasonseifer.com/2010/04/06/rake-tutorial?again
+
 http://www.rubycoloredglasses.com/2012/01/example-rake-task/
+
 http://pivotallabs.com/how-i-test-rake-tasks/
+
 http://robots.thoughtbot.com/test-rake-tasks-like-a-boss
 
 ## Resources
