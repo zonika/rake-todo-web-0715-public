@@ -1,7 +1,7 @@
 ---
   tags: rake
   language: ruby
-  resources: 4
+  resources: 10
 ---
 
 # Rake TODO
@@ -323,21 +323,14 @@ assignment.
 
 This becomes harder to test but still possible. Try to write a test.
 
-## Resources
-
-http://lukaszwrobel.pl/blog/rake-tutorial
-
-http://railscasts.com/episodes/66-custom-rake-tasks
-
-http://jasonseifer.com/2010/04/06/rake-tutorial?again
-
-http://www.rubycoloredglasses.com/2012/01/example-rake-task/
-
-http://pivotallabs.com/how-i-test-rake-tasks/
-
-http://robots.thoughtbot.com/test-rake-tasks-like-a-boss
 
 ## Resources
+* [Lukasz Wrobel's Blog](http://lukaszwrobel.pl/) - [Rake Tutorial](http://lukaszwrobel.pl/blog/rake-tutorial)
+* [RailsCasts](http://railscasts.com/) - [Custom Rake Tasks](http://railscasts.com/episodes/66-custom-rake-tasks)
+* [Jason Seifer's Blog](http://jasonseifer.com/) - [Rake Tutorial](http://jasonseifer.com/2010/04/06/rake-tutorial)
+* [Ruby Colored Glasses](http://www.rubycoloredglasses.com/) - [Example Rake Task](http://www.rubycoloredglasses.com/2012/01/example-rake-task/)
+* [Pivital Labs](http://pivotallabs.com/) - [How I Test Rake Tasks](http://pivotallabs.com/how-i-test-rake-tasks/)
+* [Thoughtbot Blog](http://robots.thoughtbot.com/) - [Test Rake Tasks Like a Boss](http://robots.thoughtbot.com/test-rake-tasks-like-a-boss)
 * [Wikipedia](http://en.wikipedia.org/) - [Jim Weirich](http://en.wikipedia.org/wiki/Jim_Weirich)
 * [Wikipedia](http://en.wikipedia.org/) - [Make (software)](http://en.wikipedia.org/wiki/Make_software)
 * [Thor](http://whatisthor.com/) - [Home](http://whatisthor.com/#getting-started)
