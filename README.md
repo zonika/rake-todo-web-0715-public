@@ -319,7 +319,7 @@ end
 When invoking the task, you simply pass along a temporary ENV variable 
 assignment.
 
-`rake user:todo_reminder EMAIL=student@flatironschool.com`. 
+`rake user:todo_reminder EMAIL=student@flatironschool.com`
 
 This becomes harder to test but still possible. Try to write a test.
 
