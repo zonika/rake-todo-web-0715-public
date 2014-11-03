@@ -290,9 +290,6 @@ When invoking the task, you simply pass along a temporary ENV variable assignmen
 
 `rake user:todo_reminder EMAIL=student@flatironschool.com`
 
-This becomes harder to test but still possible. Try to write a test.
-
-
 ## Resources
 * [Lukasz Wrobel's Blog](http://lukaszwrobel.pl/) - [Rake Tutorial](http://lukaszwrobel.pl/blog/rake-tutorial)
 * [RailsCasts](http://railscasts.com/) - [Custom Rake Tasks](http://railscasts.com/episodes/66-custom-rake-tasks)

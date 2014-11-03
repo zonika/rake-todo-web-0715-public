@@ -142,11 +142,5 @@ describe 'Rakefile' do
         task.invoke("student@flatironschool.com")
       end
     end
-
-    # describe "todo_reminder" do
-    #   it 'defines a prerequisite of environment'
-    #   it 'uses an ENV variable of EMAIL'
-    #   it 'emails the user a todo reminder'
-    # end
   end
 end
