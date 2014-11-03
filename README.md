@@ -12,8 +12,7 @@ The history of why we need Rake relates to [Make](http://en.wikipedia.org/wiki/M
 
 ## Installing Rake
 
-Most ruby environments come with rake installed, but just in case, run these in
-your terminal.
+Most ruby environments come with rake installed, but just in case, run these in your terminal.
 
 ```
 gem install rake
@@ -40,27 +39,19 @@ rake, version 10.1.1
 
 ## Rakefile
 
-Rake is powered by tasks defined or loaded within a `Rakefile` at the top of 
-a directory.
+Rake is powered by tasks defined or loaded within a `Rakefile` at the top of a directory.
 
-First of all, there is no special format for a Rakefile. A Rakefile contains 
-executable Ruby code. Anything legal in a ruby script is allowed in a Rakefile.
+First of all, there is no special format for a Rakefile. A Rakefile contains  executable Ruby code. Anything legal in a ruby script is allowed in a Rakefile.
 
-Now that we understand there is no special syntax in a Rakefile, there are some
-conventions that are used in a Rakefile that are a little unusual in a typical
-Ruby program.  Since a Rakefile is tailored to specifying tasks and actions, 
-the idioms used in a Rakefile are designed to support that.
+Now that we understand there is no special syntax in a Rakefile, there are some conventions that are used in a Rakefile that are a little unusual in a typical Ruby program.  Since a Rakefile is tailored to specifying tasks and actions, the idioms used in a Rakefile are designed to support that.
 
 So, what goes into a Rakefile?
 
 ## Tasks
 
-Tasks are the main unit of work in a Rakefile.  Tasks have a name
-(usually given as a symbol or a string), a list of prerequisites (more
-symbols or strings) and a list of actions (given as a block).
+Tasks are the main unit of work in a Rakefile.  Tasks have a name (usually given as a symbol or a string), a list of prerequisites (more symbols or strings) and a list of actions (given as a block).
 
-A task is declared by using the `task` method. `task` takes a single
-parameter that is the name of the task.
+A task is declared by using the `task` method. `task` takes a single parameter that is the name of the task.
 
 ```ruby
 task :hello_rake do
@@ -68,8 +59,7 @@ task :hello_rake do
 end
 ```
 
-You run a particular rake task by invoking the rake command with the task name
-from your terminal.
+You run a particular rake task by invoking the rake command with the task name from your terminal.
 
 ```
 rake hello_rake
@@ -83,13 +73,9 @@ Hello, from rake
 
 ## Testing Rake
 
-Rake provides programmatic access to the tasks defined in the Rakefile 
-via [`Rake::Task`](http://rake.rubyforge.org/classes/Rake/Task.html). There are
-a lot of useful things you can do with this, one of which is testing!
+Rake provides programmatic access to the tasks defined in the Rakefile via [`Rake::Task`](http://rake.rubyforge.org/classes/Rake/Task.html). There are a lot of useful things you can do with this, one of which is testing!
 
-Included is a `spec/rakefile_spec` that will test your progression through this
-tutorial. Read it, it's fun. Also, checkout how the `Rakefile` was loaded into 
-the test suite in the `spec_helper`.
+Included is a `spec/rakefile_spec` that will test your progression through this tutorial. Read it, it's fun. Also, checkout how the `Rakefile` was loaded into the test suite in the `spec_helper`.
 
 You also have a console you can run that will load your environment and your Rakefile so you can play with the Rake::Task api. `bin/console` to try it out!
 
@@ -108,29 +94,23 @@ First, run `rspec` and see the error we get without the default task defined.
 
 ```
 
-Within the test, we tried accessing the task `default` using the [Rake:Task.[]](http://rake.rubyforge.org/classes/Rake/Task.html#M000129).
-Had that task been defined, it would have returned an instance of `Rake::Task`.
+Within the test, we tried accessing the task `default` using the [Rake:Task.[]](http://rake.rubyforge.org/classes/Rake/Task.html#M000129). Had that task been defined, it would have returned an instance of `Rake::Task`.
 
-You can programmatically execute a rake task via the [invoke](http://rake.rubyforge.org/classes/Rake/Task.html#M000119) method.
-The next test does this to ensure you've defined the default task correctly.
+You can programmatically execute a rake task via the [invoke](http://rake.rubyforge.org/classes/Rake/Task.html#M000119) method. The next test does this to ensure you've defined the default task correctly.
 
 Add this to your `Rakefile`.
 
 ```ruby
 task :default do
-  puts "Hello, from the default rake task"
+  puts "Hello, from default task!"
 end
 ```
 
-Run it by simply invoking `rake` from your terminal. Run `rspec` again and you 
-should be on the next error.
+Run it by simply invoking `rake` from your terminal. Run `rspec` again and you should be on the next error.
 
 ## Task Prerequisites
 
-A nice thing about rake is that tasks can define prerequisite tasks. Imagine
-two tasks, `upcoming_todos` and `overdue_todos`, that relate to emailing users
-with their upcoming and overdue todos respectively. Both these tasks will
-require loading the environment defined in `config/environment.rb`.
+A nice thing about rake is that tasks can define prerequisite tasks. Imagine two tasks, `upcoming_todos` and `overdue_todos`, that relate to emailing users with their upcoming and overdue todos respectively. Both these tasks will require loading the environment defined in `config/environment.rb`.
 
 You can define a task, `environment` that consolidates loading the environment.
 
@@ -144,8 +124,7 @@ end
 
 After adding this, run `rspec`.
  
-It's a simple task, it simply loads the environment. Now, we can define a task
-that relies on this task for being run.
+It's a simple task, it simply loads the environment. Now, we can define a task that relies on this task for being run.
 
 ```ruby
 task :upcoming_todos => [:environment] do
@@ -157,14 +136,11 @@ end
 
 The prerequisite syntax is `:task_name => [:prerequisite, :task_names]`. You can specify more than one task.
 
-Add another task yourself called `overdue_todos` that has a prerequisite of the
-environment and calls the `with_overdue_todos` on the `User` class in a 
-similar fashion as the above task
+Add another task yourself called `overdue_todos` that has a prerequisite of the environment and calls the `with_overdue_todos` on the `User` class in a  similar fashion as the above task
 
 ## Namespaces
 
-It's useful to group tasks together and rake provides a `namespace` mechanism
-for this.
+It's useful to group tasks together and rake provides a `namespace` mechanism for this.
 
 Add this to your `Rakefile`
 
@@ -176,21 +152,17 @@ namespace :todos do
 end
 ```
 
-When the task `mark_overdue` is within a namespace of `todos` its name becomes
-`todos:mark_overdue`. You cannot refer to the task as `mark_overdue`. Both from
-the command line, and programmatically, the task is `todos:mark_overdue`.
+When the task `mark_overdue` is within a namespace of `todos` its name becomes `todos:mark_overdue`. You cannot refer to the task as `mark_overdue`. Both from the command line, and programmatically, the task is `todos:mark_overdue`.
 
 From your terminal: `rake todos:mark_overdue`
 
 From Ruby: `Rake::Task['todos:mark_overdue']`
 
-Add a task `mark_upcoming` in the `todos` namespace that behaves like the 
-`mark_overdue` task.
+Add a task `mark_upcoming` in the `todos` namespace that behaves like the  `mark_overdue` task.
 
 ## Descriptions
 
-Rake provides a nice way to describe the functionality of tasks within a task.
-The `desc` method accepts a string that describes the task adjacent to it.
+Rake provides a nice way to describe the functionality of tasks within a task. The `desc` method accepts a string that describes the task adjacent to it.
 
 Add this to your `Rakefile`
 
@@ -210,8 +182,7 @@ You can now also load your console via `rake console`.
 
 ## Arguments
 
-Finally, there are two ways to have a rake task take arguments. The first is 
-through the DSL, here are a few examples of how you can combine prerequisites and task arguments.
+Finally, there are two ways to have a rake task take arguments. The first is through the DSL, here are a few examples of how you can combine prerequisites and task arguments.
 
 ```ruby
 task :my_task, :arg1, :arg2 do |t, args| 
@@ -299,8 +270,7 @@ rake user:send_summary[student@flatironschool.com]
 Sending summary to user with student@flatironschool.com
 ```
 
-Another way to accept arguments is to simply send `ENV` arguments through your
-shell.
+Another way to accept arguments is to simply send `ENV` arguments through your shell.
 
 Define the task normally (add this to your `Rakefile` in the user namespace)
 
@@ -316,8 +286,7 @@ task :todo_reminder => [:environment] do
 end
 ```
 
-When invoking the task, you simply pass along a temporary ENV variable 
-assignment.
+When invoking the task, you simply pass along a temporary ENV variable assignment.
 
 `rake user:todo_reminder EMAIL=student@flatironschool.com`
 
