@@ -83,7 +83,7 @@ You also have a console you can run that will load your environment and your Rak
 
 You can specify a default rake task within a rake file by naming it `default`.
 
-First, run `rspec` and see the error we get without the default task defined.
+First, run `learn` and see the error we get without the default task defined.
 
 ```
   1) Rakefile default task defines a default task hello_world
@@ -106,7 +106,7 @@ task :default do
 end
 ```
 
-Run it by simply invoking `rake` from your terminal. Run `rspec` again and you should be on the next error.
+Run it by simply invoking `rake` from your terminal. Run `learn` again and you should be on the next error.
 
 ## Task Prerequisites
 
@@ -122,7 +122,7 @@ task :environment do
 end
 ```
 
-After adding this, run `rspec`.
+After adding this, run `learn`.
  
 It's a simple task, it simply loads the environment. Now, we can define a task that relies on this task for being run.
 
