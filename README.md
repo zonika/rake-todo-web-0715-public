@@ -1,8 +1,4 @@
----
-  tags: rake
-  language: ruby
-  resources: 10
----
+
 
 # Rake TODO
 
